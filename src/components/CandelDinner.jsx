@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function CandleDinner() {
+  const navigate = useNavigate();
   const [confirmed, setConfirmed] = useState(false);
 
   const [menu, setMenu] = useState({
@@ -113,7 +116,8 @@ export default function CandleDinner() {
             </button>
           </>
         ) : (
-          /* FAKE BILL */
+          <>
+          {/* FAKE BILL */}
           <div className="animate-fadeIn">
             <h2 className="text-3xl font-extrabold text-pink-400">
               💕 Date Confirmed
@@ -153,6 +157,15 @@ export default function CandleDinner() {
               Best night of my life — because it’s with you.
             </p>
           </div>
+          <div>
+            <button
+            onClick={()=> navigate("/")}
+            className="mt-5 px-5 py-2 text-xl font-bold rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-2xl hover:scale-110 transition-all duration-300"
+          >
+             Repeat
+          </button>
+          </div>
+          </>
         )}
       </div>
 

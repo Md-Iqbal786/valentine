@@ -37,25 +37,30 @@ export default function ValentinePage() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden relative flex flex-col items-center justify-center bg-gradient-to-br from-pink-400 via-rose-200 to-pink-500">
+    <div className="min-h-screen overflow-hidden relative flex flex-col items-center justify-center bg-gradient-to-br from-[#aa054a] via-[#1f010a] to-[#70026d]">
+
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <span
+            key={i}
+            className="absolute text-pink-500 opacity-20 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${6 + Math.random() * 6}s`,
+              fontSize: `${12 + Math.random() * 24}px`,
+            }}
+          >
+            ❤️
+          </span>
+        ))}
+      </div>
+
       {/* 🎶 Background Music */}
       <audio id="bg-music" loop>
         <source src={bgSong} type="audio/mpeg" />
       </audio>
 
-      {/* 💕 Floating Hearts */}
-      {[...Array(20)].map((_, i) => (
-        <span
-          key={i}
-          className="absolute text-pink-400 text-2xl animate-float"
-          style={{
-            left: Math.random() * 100 + "%",
-            animationDelay: `${Math.random() * 5}s`,
-          }}
-        >
-          💖
-        </span>
-      ))}
+     
 
       <div className="relative group p-2">
         {/* 🌸 Animated glowing border */}
@@ -115,7 +120,7 @@ export default function ValentinePage() {
           {/* NO (runs away) */}
           <button
             onMouseEnter={moveNoButton}
-            className="absolute px-8 py-3 text-xl text-white rounded-full bg-[#513f3f] font-bold shadow-lg transition-all duration-300"
+            className="absolute px-8 py-3 text-xl text-white rounded-full bg-gradient-to-br from-[#aa054a] via-[#1f010a] to-[#70026d] font-bold shadow-lg transition-all duration-300"
             style={noPos}
           >
             NO😏
@@ -134,7 +139,7 @@ export default function ValentinePage() {
           </p>
           <button
           onClick={() => navigate("/timeLine")}
-          className="mt-10 text-xl bg-rose-500 p-3 text-white rounded-3xl animate-bounce"
+          className="mt-10 text-xl bg-gradient-to-br from-[#aa054a] via-[#1f010a] to-[#70026d] p-3 text-white rounded-3xl animate-zoomIn"
           >
             Click For Our Love History
           </button>
@@ -166,11 +171,33 @@ export default function ValentinePage() {
 
       {/* ✨ Animations */}
       <style>
+        
+        {`
+          @keyframes float {
+            0% { transform: translateY(100vh) scale(1); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+          }
+          .animate-float {
+            animation-name: float;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        `},
+      
         {`
         @keyframes float {
           0% { transform: translateY(0); opacity: 1; }
           100% { transform: translateY(-100vh); opacity: 0; }
         }
+          @keyframes zoomIn {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.1); }
+          }
+          .animate-zoomIn {
+            animation: zoomIn 10s ease-out forwards;
+            animation-iteration-count: infinite;
+          }
         .animate-float {
           animation: float 10s linear infinite;
         }
@@ -184,7 +211,7 @@ export default function ValentinePage() {
         }
 
         .animate-fade-in {
-          animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 3s ease-in-out;
         }
 
         @keyframes fadeIn {
