@@ -2,11 +2,26 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Homepage() {
-
   const navigate = useNavigate();
-  
+
   return (
-    <div className="bg-[#f67ca2f3] dark:bg-background-dark text-[#181111] dark:text-white transition-colors duration-300">
+    <div className="bg-gradient-to-br from-[#da4e88] via-[#d10341] to-[#790075] dark:bg-background-dark text-[#181111] dark:text-white transition-colors duration-300">
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <span
+            key={i}
+            className="absolute text-pink-500 opacity-20 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${6 + Math.random() * 6}s`,
+              fontSize: `${12 + Math.random() * 24}px`,
+            }}
+          >
+            ❤️
+          </span>
+        ))}
+      </div>
+
       <header className="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-red-700">
         <div className="flex items-center p-4 justify-between max-w-md mx-auto">
           <div className="text-primary flex size-10 items-center justify-center">
@@ -14,7 +29,7 @@ function Homepage() {
               favorite
             </span>
           </div>
-          <h2 className="text-[#d60000] text-2xl font-extrabold leading-tight flex-1 text-center pr- bubbly-text animate-bounce">
+          <h2 className="text-[#ffdede] text-2xl font-extrabold leading-tight flex-1 text-center pr- bubbly-text animate-bounce">
             My Forever Valentine
           </h2>
           <div className="text-primary flex size-10 items-center justify-center">
@@ -40,7 +55,7 @@ function Homepage() {
     `,
               }}
             >
-              <div className="flex flex-col gap-3 text-center">
+              <div className="flex flex-col gap-3 text-center ">
                 <h1 className="text-white text-5xl font-black leading-[1.1] tracking-tighter @[480px]:text-6xl">
                   Happy
                   <br />
@@ -64,20 +79,24 @@ function Homepage() {
 
         <section className="py-8">
           <div className="px-4 mb-2 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary font-bold text-red-600">
+            <span className="material-symbols-outlined text-primary font-bold text-slate-200">
               celebration
             </span>
             <div>
-              <h2 className=" text-3xl  font-sans font-bold drop-shadow-[0_4px_10px_rgba(243,66,0,0.6)] text-[#a30142]">
-                Why I Love You
+              <h2 className=" text-2xl  font-sans font-bold drop-shadow-[0_4px_10px_rgba(243,66,0,0.6)] text-[#fbf3dd]">
+                Why I Love You Khushi(Puchu)
               </h2>
-              <h3 className="text-sm text-[#791b3d]">(Touch which one you like)</h3>
+              <h3 className="text-sm text-[#ffd0e1]">
+                (Touch which one you like)
+              </h3>
             </div>
           </div>
 
+
+              
           <div className="grid grid-cols-2 gap-4 p-4">
             <div
-              className="bg-[#ed1262] p-5 rounded-xl   shadow-[5px_5px_15px_#0e0103]
+              className="bg-[#ed1262] p-5 rounded-xl   shadow-[5px_5px_15px_#800026]
  hover:-rotate-1 hover:animate-ping transition-transform"
             >
               <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
@@ -87,7 +106,7 @@ function Homepage() {
               <p className="text-sm text-white">How you care for me</p>
             </div>
             <div
-              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#0e0103]
+              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#800026]
  hover:rotate-2 hover:animate-ping transition-transform"
             >
               <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-3">
@@ -97,7 +116,7 @@ function Homepage() {
               <p className="text-sm text-white">You make me weak.</p>
             </div>
             <div
-              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#0e0103]
+              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#800026]
  hover:-rotate-2 hover:animate-ping transition-transform"
             >
               <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mb-3">
@@ -108,7 +127,7 @@ function Homepage() {
             </div>
 
             <div
-              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#0e0103]
+              className="bg-[#ed1262] p-5 rounded-xl  shadow-[5px_5px_15px_#800026]
  hover:rotate-3 hover:animate-ping transition-transform"
             >
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-3">
@@ -123,15 +142,16 @@ function Homepage() {
         </section>
 
         <section className="flex justify-center items-center pb-10">
-          <button 
-          onClick={() => navigate("/valentine")}
-          className="bg-[#ed1262] h-12 w-auto p-2 px-4 text-md font-sans rounded-full shadow-[5px_5px_10px_#88072b] animate-bounce">
+          <button
+            onClick={() => navigate("/valentine")}
+            className="bg-[#ed1262] h-12 w-auto p-2 px-4 text-md font-sans rounded-full shadow-[5px_5px_10px_#88072b] animate-bounce"
+          >
             Click for Surprise
           </button>
         </section>
 
         <footer className="py-12 border-t border-red-400 text-center">
-          <p className="text-[#a30142] text-xl font-medium">
+          <p className="text-[#fff3b7] text-xl font-medium">
             Made with ❤️ just for you
           </p>
           <div className="flex justify-center gap-4 mt-4 text-red-600 animate-bounce">
@@ -148,7 +168,20 @@ function Homepage() {
         </footer>
       </main>
 
-      <div className="h-8"></div>
+      <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(100vh) scale(1); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+          }
+          .animate-float {
+            animation-name: float;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+        `}
+      </style>
     </div>
   );
 }

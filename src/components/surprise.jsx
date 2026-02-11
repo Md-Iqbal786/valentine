@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import doku from "../assets/huhhh.gif";
+import doku from "../assets/kiss-love.gif";
+import bgSong from "../assets/song.mp3";
+import { useNavigate } from "react-router-dom";
+
 
 export default function ValentinePage() {
+  const navigate = useNavigate();
   const [noPos, setNoPos] = useState({ top: "55%", left: "55%" });
   const [showLove, setShowLove] = useState(false);
   const [confetti, setConfetti] = useState([]);
@@ -36,7 +40,7 @@ export default function ValentinePage() {
     <div className="min-h-screen overflow-hidden relative flex flex-col items-center justify-center bg-gradient-to-br from-pink-400 via-rose-200 to-pink-500">
       {/* 🎶 Background Music */}
       <audio id="bg-music" loop>
-        <source src="/love.mp3" type="audio/mpeg" />
+        <source src={bgSong} type="audio/mpeg" />
       </audio>
 
       {/* 💕 Floating Hearts */}
@@ -123,11 +127,17 @@ export default function ValentinePage() {
       {showLove && (
         <div className="text-center animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-['Dancing_Script'] text-rose-700 mb-4">
-            Yayyy! 💖
+            Hurraahhh!!!!!! Love You Baby
           </h2>
           <p className="text-xl text-rose-600">
             You just made my heart the happiest 😍💘
           </p>
+          <button
+          onClick={() => navigate("/timeLine")}
+          className="mt-10 text-xl bg-rose-500 p-3 text-white rounded-3xl animate-bounce"
+          >
+            Click For Our Love History
+          </button>
         </div>
       )}
 
@@ -144,17 +154,15 @@ export default function ValentinePage() {
             }}
             
           >
-            🎊
+            🎉
           </div>
           
           
         </>
       ))}
 
-      {/* Footer */}
-      <p className="absolute bottom-5 text-rose-700 italic">
-        Made with ❤️ just for you
-      </p>
+      
+      
 
       {/* ✨ Animations */}
       <style>
