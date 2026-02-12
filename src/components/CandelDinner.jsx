@@ -15,10 +15,10 @@ export default function CandleDinner() {
   });
 
   const prices = {
-    starter: 299,
-    main: 699,
-    dessert: 349,
-    drink: 499,
+    starter: 599,
+    main: 5199,
+    dessert: 549,
+    drink: 2299,
   };
 
   const total =
@@ -57,8 +57,12 @@ export default function CandleDinner() {
               >
                 <option value="">🍽️ Main Course</option>
                 <option>Heart-Shaped Pizza</option>
-                <option>Creamy Alfredo Pasta</option>
-                <option>Grilled Chicken</option>
+                <option>Veg Hakka Noodles</option>
+                <option>Sahi Paneer + Butter Naan</option>
+                <option>Dal Makhani + Garlic Naan</option>
+                <option>Paneer Butter Masala + Butter Naan</option>
+                <option>Sahi Paneer</option>
+
               </select>
 
               <select
@@ -67,7 +71,10 @@ export default function CandleDinner() {
               >
                 <option value="">🍰 Desserts</option>
                 <option>Chocolate Lava Cake</option>
+                <option>Ferrero Rocher Cake</option>
                 <option>Red Velvet Cupcake</option>
+                <option>Gulab Jamun with ice cream</option>
+                <option>Rasmalai</option>
                 <option>Strawberry Cheesecake</option>
               </select>
 
@@ -78,7 +85,9 @@ export default function CandleDinner() {
                 <option value="">🍷 Drinks</option>
                 <option>Red Wine</option>
                 <option>Strawberry Mocktail</option>
-                <option>Champagne</option>
+                <option>Fresh Lime Soda</option>
+                <option>Cold Coffee</option>
+                <option>Mojito (non-alcoholic)</option>
               </select>
 
               <select
@@ -86,9 +95,10 @@ export default function CandleDinner() {
                 className="w-full p-3 rounded-xl bg-black/40 text-pink-200"
               >
                 <option value="">🎶 Music Mood</option>
-                <option>Piano Love</option>
-                <option>Acoustic Romance</option>
+                <option>Piano Love</option>        
                 <option>Soft Bollywood Love</option>
+                <option>Romance Song</option>
+                <option>hard Sensual Songs</option>
               </select>
             </div>
 

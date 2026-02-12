@@ -5,24 +5,54 @@ export default function LoveTimeline() {
   const navigate = useNavigate();
   const timeline = [
     {
-      year: "2022",
-      title: "The First Hello 💬",
-      desc: "I never knew one message could change my entire life.",
+      year: "19/02/2019",
+      title: "propose",
+      desc: "In 2019, I was brave enough to let my heart speak her name.💍✨ ",
     },
     {
-      year: "2023",
-      title: "We Became Us ❤️",
-      desc: "Somewhere between late-night talks and silly laughs, I fell for you.",
+      year: "04/08/2020",
+      title: "First Hug",
+      desc: "Bas ek baar gale laga lo, saari thakan aur tension khud hi chali jati thi",
     },
     {
-      year: "2024",
-      title: "Stronger Than Ever 🔥",
-      desc: "Every fight, every hug — only made us closer.",
+      year: "14/09/2020",
+      title: "First Kiss 💋",
+      desc: "Your lips don’t just smile… they start wars in my heart.💋",
     },
     {
-      year: "Forever",
-      title: "My Valentine 💍",
-      desc: "I don’t want perfect. I want YOU.",
+      year: "02/11/2021",
+      title: "Meet At Home",
+      desc: "That Was awesome, Bahurani apne sasural pehli bar gyi thi",
+    },
+    {
+      year: "11/03/2023",
+      title: "Lost Contact",
+      desc: "Ek saal baat nahi hui, par dil ne kabhi tumse baat karna band nahi kiya.",
+    },
+    {
+      year: "17/05/2024",
+      title: "Again in contact",
+      desc: "Ek saal ki khamoshi ke baad, tumse phir baat hui… aur laga jaise meri duniya wapas mil gayi. 💖",
+    },
+    {
+      year: "30/05/2024",
+      title: "Meet at Station",
+      desc: "Platform par tumhe dekha, aur us ek hug ne poore ek saal ki doori mita di.😍",
+    },
+    {
+      year: "10/07/2024",
+      title: "Varansi Ghat visit",
+      desc: "Banaras ki shaam, Ganga ki hawa… aur tum mere saath — uss pal se zyada khoobsurat kuch nahi tha.",
+    },
+    {
+      year: "",
+      title: "Confidential😉😉😉",
+      desc: "Duniya se chhupa kar milte hain, par dil toh har jagah tumhara naam leta hai.",
+    },
+    {
+      year: "present",
+      title: "Forever",
+      desc: "Yeh mulaqat bas ek pal ka silsila na rahe, Har janam mein tumse milna meri kismat bana rahe",
     },
   ];
 
