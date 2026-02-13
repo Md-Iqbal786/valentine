@@ -169,10 +169,10 @@ export default function CandleDinner() {
           </div>
           <div>
             <button
-            onClick={()=> navigate("/")}
+            onClick={()=> navigate("/LoveLetter")}
             className="mt-5 px-5 py-2 text-xl font-bold rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-2xl hover:scale-110 transition-all duration-300"
           >
-             Repeat
+             click for loveMessage
           </button>
           </div>
           </>

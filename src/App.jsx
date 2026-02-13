@@ -4,6 +4,8 @@ import Homepage from './components/homepage'
 import Surprise from './components/surprise'
 import LoveTimeline from './components/loveTimeLine';
 import CandleDinner from './components/CandelDinner';
+import LoveMessage from './components/loveMessage';
+import LoveLetter from './components/loveLetter';
 
 
 function App() {
@@ -16,7 +18,8 @@ return(
       <Route path="/valentine" element={<Surprise/>} />
       <Route path="/timeLine" element={<LoveTimeline/>} />
       <Route path="/CandleDinner" element={<CandleDinner/>} />
-
+      <Route path="/LoveMessage" element={<LoveMessage/>} />
+      <Route path="/LoveLetter" element={<LoveLetter/>} />
     </Routes>
 )
 }
